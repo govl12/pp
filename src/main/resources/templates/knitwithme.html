@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knit with me</title>
+    <script src="include.js"></script>
+</head>
+<style>
+    *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        #boardwholewrap {
+            width : 1080px;
+            margin : 0 auto;
+            height : 100%;
+            /* border : 1px solid black; */
+        }
+        .board_name{
+            display: flex;
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 40px 0px 40px;
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+        #board_content{
+            width : 1080px;
+            margin : 0 auto;
+            /* height : 600px; */
+            /* border : 1px solid orange; */
+        }
+        #board_content p {
+            text-align : center;
+        }
+        /* 제일 상위 text-align center. 그 아래 ul에 인라인블록. 그아래 li에는 float:left 가운데정렬! */
+        .boardlist_all{
+            text-align: center;
+            text-align: center;
+            /* height : 650px; */
+            /* border : 1px solid black; */
+        }
+        .board_list{
+            display : inline-block;
+            /* border : 1px solid red; */
+            margin-left : 50px;
+            margin-bottom : 30px;
+            font-size : 13px;
+        }
+        .board_list .thum img{
+            /* border :1px solid red; */
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            width : 300px;
+            height : 320px;
+            float : left;
+            margin-bottom : 10px;
+        }
+        .board_list .thum>img:hover{
+            opacity: 50%;
+        }
+        .td_page {
+           text-align: center;
+           margin-bottom : 30px;
+        }
+        .td_page li{
+            display: inline-block;
+            /* border : 1px solid red; */
+            margin : 3px;
+        }
+       
+</style>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section id="boardwholewrap">
+        <article id="board_content">
+            <div class="board_name">
+                <img src="img/boardlogo.png">
+                <h3>knit with me</h3>
+                <img src="img/boardlogo2.png">
+            </div>
+            <div class="boardlist_all">
+                <ul class="board_list">
+                    <li class="thum"><img src="img/kwm01.jpg"></li>
+                    <div class="clear"></div>
+                    <li class="title">[모집중] 지퍼스웨터 같이 뜨실분~!</li>
+                    <li class="date">2023.01.16</li>
+                </ul>
+                <ul class="board_list">
+                    <li class="thum"><img src="img/kwm02.jpg"></li>
+                    <div class="clear"></div>
+                    <li class="title">[모집완료] 목도리</li>
+                    <li class="date">2023.01.08</li>
+                </ul>
+                <div class="clear"></div>
+                <ul class="board_list">
+                    <li class="thum"><img src="img/main_best03.jpg"></li>
+                    <div class="clear"></div>
+                    <li class="title">[진행중] 토끼인형</li>
+                    <li class="date">2023.01.08</li>
+                </ul>
+                <ul class="board_list">
+                    <li class="thum"><img src="img/kwm04.jpg"></li>
+                    <div class="clear"></div>
+                    <li class="title">[진행중] 코바늘 티코스터</li>
+                    <li class="date">2023.01.07</li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <ul class="td_page">
+                <li>◀</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>▶</li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>

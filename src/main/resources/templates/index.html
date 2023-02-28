@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}">
+<link rel="stylesheet" type="text/css" href="/css/footer.css">
+<!-- 둘이 무슨 차이일까나~_~~_~~_~_~ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <script src="./include.js">  </script>
+    <style>
+     *{margin : 0;padding:0;
+    text-decoration: none;
+    list-style-type: none;}
+      main {
+        width : 1080px;
+        margin : 0 auto;
+      }
+      /* * {box-sizing: border-box;} */
+
+      .mySlides {display: none;
+      }
+      
+      .slideshow-container {
+        margin-top : 20px;
+        position: relative;
+        /* margin: auto; */
+        /* border : 1px solid red; */
+      }
+
+     .slideshow-container img {
+      vertical-align: middle;
+      /* width : 1080px; */
+      height : 550px; 
+      /* border : 1px solid black; */
+      }
+      .active {
+        background-color: #717171;
+      }
+      
+      /*페이드 효과 */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.8s;
+        
+      }
+/* dot 지우기 위해서 dot css 주석처리
+      .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+      
+      @keyframes fade {
+        from {opacity: .5} 
+        to {opacity: .8}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
+      #main_content{
+        margin-bottom : 20px;  /* border : 1px solid orange; */
+      }
+      .main-best h3{
+      /* border : 1px solid red; */
+      margin-left : 20px;
+      }
+      .main-best h3>span {
+        color : red;
+      }
+      .main-best {
+        /* border : 1px solid black; */
+        height : 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      .main-best ul li img {
+        border-radius : 10px;
+        width : 200px;
+        height : 200px;
+        /* border : 1px solid red; */
+      }
+      .best_item{
+        float : left;
+        text-align : center;
+        margin : 20px 0 0 50px;
+
+        /* border : 1px solid red; */
+      }
+      
+    </style>
+</head>
+<body>
+  <header>
+    <div th:replace="~{header::headerFragment}"></div>
+  </header>
+  <main>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img/main01.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/main02.jpg" style="width:100%">
+        </div>
+  <br>        
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+        </div> 
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+          }
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+          //반복문을 사용하여 slides 이미지 display = none으로 처리.
+          slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          //slideindex의 값이 slides.lenght 보다 클 경우, slideindex의 값을 1로 처리.
+          //(첫번째 사진으로 처리)
+          if (slideIndex > slides.length) {slideIndex = 1}
+          // i가 dots.length보다 작으면     
+          for (i = 0; i < dots.length; i++) {
+            //dot 클래스가 가지고 있는 모든 active 클래스를 ""로 대체.
+          dots[i].className = dots[i].className.replace(" active", "");
+          }
+          
+          // slides 변수에서, slideindex-1번의 값을 보이도록(block)으로 설정.
+          slides[slideIndex-1].style.display = "block";   
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // 2초마다 함수 호출(none>block)하여 
+          //클릭하지 않아도 자동으로 사진 변경 
+        }
+          </script> 
+    </div>
+        <section id = "main_content">
+            <div class="main-best">
+              <h3>KNIT<span>-ing</span></h3>
+              <ul class="best_item">
+               <li class="best_item_name"><img src="img/main_best01.jpeg"></li>
+               <!-- <li>뜨개구리</li> -->
+              </ul>
+              <ul class="best_item">
+                <li class="best_item_name"><img src="img/main_best02.jpg"></li>
+                <!-- <li>자이언트얀 가방</li> -->
+              </ul>
+              <ul class="best_item">
+                <li><img src="img/main_best03.jpg"></li>
+                <!-- <li class="best_item_name">토끼인형</li> -->
+              </ul> 
+            </div>
+        </section>
+    </main>
+
+    <!-- <div class="clear"></div> -->
+    <footer>
+        <div th:replace="~{footer::footerFragment}"></div>
+    </footer>
+</body>
+</html>

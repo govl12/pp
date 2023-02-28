@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GoyangIlsan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+      *{ margin:0;
+        padding:0;
+        text-decoration:none;
+        list-style-type: none;
+        color : black;
+        font-family: 'GoyangIlsan';
+         } /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
+       
+        .clear{
+            clear : both;
+        }
+        
+        .header_wrap{
+            width : 1080px;
+            /* border : 1px solid red; */
+            margin : 0 auto;
+        }
+        /*탑메뉴*/
+        #top_menu{
+            /* border : 1px solid violet; */
+            float : right;
+            margin-top : 5px;
+            font-size: 15px;
+        }
+        .top_menu_list li{
+            float : left;
+            margin : 0 20px 0 15px;
+            /* border : 1px solid red; */
+        }
+        
+        /*로고 */
+        .header_wrap #logo{
+            /* border : 1px solid blue; */
+            align-items: center;
+            margin : 0 auto;  /* 100 프로일 경우 중앙정렬ㅇ 안됨 */
+            width : 400px;
+            
+        }
+        #logo img {
+            width : 400px;
+            height : 100px;
+            /* border : 1px solid red; */
+            margin : 0 auto;
+            align-items : center;
+        }
+        
+        /*헤더 카테고리 메뉴 */
+        #category_menu {
+            margin-top : 20px;
+            /* height : 30px; */
+            border-bottom : 1px solid rgb(163, 161, 161,0.3);
+            /* margin-bottom : 15px; */
+        }
+        .c_menu_list {
+            width : 1080px;
+            margin : 0 auto;
+            text-align: center;
+            margin-bottom : 5px;
+        }
+
+        .c_menu_list>li{
+            display : inline-block;
+            /* border :1px solid red; */
+            text-align : center;
+            /* margin : 20px; */
+        /*  */
+            margin-left : 90px;
+        }
+
+        .c_menu_list>li>a{
+            font-size: 22px;
+            font-weight: bold;
+            color : black;
+        }
+        .c_menu_list>li .sub_list{
+            /* border : 1px solid blue; */
+            width : 100px;
+            display : none;
+            position : absolute;
+        }
+        .c_menu_list li:hover{
+             /* background-color: rgb(248, 198, 151, 0.6); */
+             transition-duration: 10s;
+        }   
+        .c_menu_list>li:hover .sub_list {
+            transition-duration: 8s;
+            /* position:absolute; */
+            /* text-align: left; */
+            /* border : 1px solid red; */
+            display : block;
+            width : 150px;
+            border-radius: 5px;
+            background-color: rgb(248, 198, 151);
+            z-index: 1;
+            margin-top : 3px;
+            /* transition: 1s; */
+            margin-left : -30px;
+            
+            /* height :300px; */
+            /* margin-top : 20px; */
+        }
+        .sub_list li{
+            margin : 20px;
+        }
+        .sub_list>li>a {
+            color : black;
+        }
+        /* .sub_list li:hover{
+            margin : 20px;
+        } */
+        

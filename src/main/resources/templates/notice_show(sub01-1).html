@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notice_show</title>
+    <script src="include.js"></script>
+    <style>
+        *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        section {
+            width : 1080px;
+            margin : 0 auto;
+            height : 100%;
+            /* border : 1px solid black; */
+        }
+        .board_name{
+            display: flex;
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 40px 0px 40px;
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+        .boardcontent_title{
+            font-size : 26px;
+            padding : 10px;
+            border-top : 2px solid black;
+            border-bottom : 1px solid rgb(189, 186, 186);
+            display: flex;
+            flex-flow : column wrap;
+            
+            /* border : 1px solid red; */
+        }
+        .boardcontent_title p{
+            text-align: center;
+            font-weight:bold;
+            color : rgb(110, 28, 28);
+        }
+        .boardcontentshow_wrap{
+            /* border :1px solid black; */
+            display:flex;
+            flex-flow: column wrap;
+
+            align-items: center;
+            height : 55px;
+            justify-content: center;
+            background-color: rgb(241, 240, 238);
+        }
+        .boardcontentshow01{
+            /* border : 1px solid red; */
+            justify-content: space-between;
+            width : 700px;
+            display: flex;
+            flex-flow:row wrap;
+        }
+        .board_contentwrap{
+            height : 100%;
+            /* border : 1px solid black; */
+            margin-top : 30px;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: center;
+            justify-content: center;
+            padding-bottom : 30px;
+            /* border-bottom : 1px solid rgb(189, 186, 186); */
+        }
+        .boardcontentimg{
+            width : 700px;
+            /* display: inline-block; */
+            text-align: center;
+            display:block;
+            margin : 0 auto;
+                  /*  이미지 중앙정렬을 위해서 margin 0 auto 쓰려면 블록형식이어야한당..*/
+        }
+        .boardcontentimg>img{
+            text-align: center;
+             width : 100%;
+            height : 450px;
+            /* border : 1px solid red; */
+
+        }
+        .board_content>p{
+            margin-top : 10px;
+            font-size : 17px;
+        }
+        .emptybox{
+            height : 30px;
+            border-bottom : 1px solid rgb(199, 199, 199);
+        }
+        .board_commenttitle{
+            font-size:22px;
+            width : 100%;
+            font-weight : bold;
+            margin : 20px 0px 20px;
+            /* border : 1px solid red; */
+        }
+ 
+        .board_commwritewholewrap{
+            width : 100%;
+            display:flex;
+            flex-flow:row wrap;
+            border-bottom : 1px solid rgb(199, 199, 199);
+            /* border : 1px solid red; */
+        }
+        .boardcommboxwrite{
+            height : 30px;
+            border-style: none;
+            border-radius: 5px;
+            width : 630px;
+            padding : 10px;
+            /* border :1px solid red; */
+        }
+        .boardcommboxwrite:focus{
+            outline: none;
+            outline:1px solid rgb(207, 94, 94);
+        }
+        .commwrite_btn{
+            width : 60px;
+            height : 30px;
+            border : 1px solid grey;
+            background-color: white;
+            border-radius : 5px;
+
+            margin : 10px 10px;
+        }
+        .commshow{
+            width : 100%;
+            display:flex;
+            flex-flow : column wrap;
+            margin : 20px 0px;
+            text-align : center;
+        }
+       .board_list{
+        display: flex;
+        flex-flow:column wrap;
+       }
+       .board_list{
+        border-top : 1px solid black;
+        border-bottom : 1px solid black;
+       }
+        .board_showpagelist01,.board_showpagelist02
+        {
+        display:flex;
+        flex-flow:row wrap;
+        /* align-items: center;
+        justify-content: center; */
+       }
+       .board_showpagelist01{
+        border-bottom : 1px dashed rgb(172, 77, 77);
+       }
+       .board_list01{
+        line-height:70px;
+        text-align: center;
+        width : 120px;
+       }
+
+       .board_list02{
+        line-height:70px;
+        width : 960px;
+    }
+    .backtolist{
+        width : 130px;
+        height : 50px;
+        margin : 0 auto;
+        border : 1px solid rgb(160, 157, 157);
+        display: block;
+        border-radius: 6px;
+        margin-top : 20px;
+        margin-bottom : 100px;
+        cursor:pointer;
+        font-size: 20px;
+    }
+  
+
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section>
+        <article id="notice_content">
+            <div class="board_name">
+            <img src="img/notice.png">
+            <h3>공지사항</h3>
+            </div>
+            <div class="boardcontent_title"> 
+                <p>공지사항입니다.</p>
+            </div>
+            <div class="boardcontentshow_wrap">
+                <div class="boardcontentshow01">
+                    <div class="board_writer">
+                        <p>작성자 : 관리자</p>
+                    </div>
+                    <div class="board_writedate">
+                        <p>작성일 : 2023년 01월 13일</p>
+                    </div>
+                </div>
+            </div>
+            <div class="board_contentwrap">
+                <div class="board_content">
+                    <div class="boardcontentimg">
+                    <img src="img/notice_img.jpg">
+                    </div>
+                    <p> 안녕하세요. KNIT TODAY입니다.<br/>
+                        오늘도 즐거운 뜨개 시간 보내시길 바랍니다.
+                    </p>
+                    <div class="emptybox"></div>
+                    <div class="board_commenttitle">댓글</div>
+                    <div class="board_commwrap">
+                        <form class="board_commwritewholewrap">
+                            <div class="board_commwritewrap">
+                                <input type="text" placeholder="댓글을 작성해주세요." class="boardcommboxwrite">
+                            </div>
+                            <button type="submit" class="commwrite_btn"><span>작성</span></button>
+                        </form>
+                        <div class="commshow">
+                            <span>댓글이 없습니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="board_list">
+                <div class="board_showpagelist01">
+                    <div class="board_list01">
+                        <p> 이전글</p>
+                    </div>
+                    <div class="board_list02">
+                        <p>이전글이 존재하지 않습니다.</p>
+                    </div>
+                </div>
+                <div class="board_showpagelist02">
+                    <div class="board_list01">
+                        <p> 다음글</p>
+                    </div>
+                        <div class="board_list02">
+                        <p> 공지사항입니다. 읽어주세요 </p>
+                    </div>
+                </div>
+            </div>
+            <a href='notice.html'><button type="button" class="backtolist">
+                <span>목록</span>
+            </button></a>
+        </article>
+        </div>
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>

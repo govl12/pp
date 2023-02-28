@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>market</title>
+    <script src="include.js"></script>
+</head>
+<style>
+    *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+    .clear {
+        clear:both;
+    }
+    /* #boardwholewrap {
+            width : 1080px;
+            margin : 0 auto;
+            height : 100%;
+    }*/
+        .board_name{
+          
+            margin : 0 auto;
+            height : 100%;
+            display: flex;
+            /* justify-content: center; */
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 20px 0px 20px 250px;
+            /* position:fixed; */
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+        .board_contentwrap{
+            text-align: center;
+            /* display : inline-block 가운데정렬 = 부모요소에 text-align:center */
+            background-color: rgb(241, 234, 225);
+        }
+        .content_listwrap{
+            padding : 0 30px 0 ;
+            display: inline-block;
+            /* border : 1px solid red; */
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            margin-top : 20px;
+            /* height : 650px; */
+            /* border : 1px solid black; */
+        }
+        .content_list{
+            display : inline-block;
+            /* border : 1px solid red; */
+            margin : 30px;
+            font-size : 13px;
+        }
+        .content_list .thum img{
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            width : 200px;
+            height : 220px;
+            float : left;
+            margin-bottom : 10px;
+        }
+        .page {
+           text-align: center;
+        }
+        .page li{
+            display: inline-block;
+            /* border : 1px solid red; */
+            margin-bottom: 10px;
+            margin-top : 20px;
+        }
+</style>
+<body>
+     <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section id="boardwholewrap">
+        <article id="board_content">
+            <div class="board_name">
+                <img src="img/boardlogo.png">
+                <h3>Market</h3>
+            </div>
+            <div class="board_contentwrap">
+                <div class="content_listwrap">
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea01.jpg"></li>
+                        <div class="clear"></div>
+                        <li class="title">치아오구 블루쇼티</li>
+                        <li class="price">110,000</li>
+                        <li class="date">2023.01.16</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea02.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">볼실 모음</li>
+                        <li class="price">30,000</li>
+                        <li class="date">2023.01.08</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea03.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">콘사 500g</li>
+                        <li class="price">27,000</li>
+                        <li class="date">2023.01.08</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea04.jpeg"></li>
+                        <li class="title">단추 부자재 나눔</li>
+                        <li class="price">0</li>
+                        <li class="date">2023.01.08</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea05.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">니트프로 디럭스</li>
+                        <li class="price">80,000</li>
+                        <li class="date">2023.01.07</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea06.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="sub">니트프로 숏팁</li>
+                        <li class="price">50,000</li>
+                        <li class="date">2023.01.05</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea07.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">자이언트 얀</li>
+                        <li class="price">35,000</li>
+                        <li class="date">2023.01.05</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea08.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">울 콘사(파랑)</li>
+                        <li class="price">20,000</li>
+                        <li class="date">2023.01.04</li>
+                    </ul>
+                    <ul class="content_list">
+                        <li class="thum"><img src="img/flea09.jpeg"></li>
+                        <div class="clear"></div>
+                        <li class="title">볼실 모음</li>
+                        <li class="price">25,000</li>
+                        <li class="date">2023.01.01</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <ul class="page">
+                    <li>◀</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>▶</li>
+                </ul>
+            <div class="clear"></div>
+            </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>

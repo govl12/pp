@@ -1,0 +1,50 @@
+@charset "UTF-8";
+   * {margin:0;padding:0} /* 처음 시작 시 기본 셋팅 = 기본 설정을 리셋 한다. */
+        li {list-style:none;}
+        a{text-decoration:none;
+            color : black}
+        .clear{
+            clear : both;
+        }
+        footer{
+            height : 150px;
+            width : 100%;
+            background-color: rgba(245, 195, 173, 0.4);
+            /* padding-top : 10px;
+            margin-top : 10px; */
+        }
+        #footer {
+            /* height : 200px; */
+            /* background-image: url(img/footer_img.jpg);
+            background-image :no-repeat; */
+            background-color: rgb(245, 182, 153, 0.4);   
+            width : 1080px;
+            margin : 0 auto;
+            /* border : 1px solid red; */
+           
+        }
+        .footer_logo {
+            display: block;
+            float : left;
+            /* border : 1px solid red; */
+            margin-top : 10px;
+        }
+        .footer_inform {
+           /* border : 1px solid red; */
+           float : right;
+           margin-top : 100px;
+           margin-right : 130px;
+        }
+
+        .footer_inform ul li {
+            margin : 10px;
+            /* border : 1px solid red; */
+        
+        }
+        .footer_inform >ul li{
+            display: inline;
+           /* border : 1px solid red; */
+           color : gray;
+           vertical-align: bottom;
+           margin-top : 20px;
+        }

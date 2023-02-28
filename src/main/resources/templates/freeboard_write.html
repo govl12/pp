@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="include.js"></script>
+</head>
+<style>
+    *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        section {
+            width : 1080px;
+            margin : 0 auto;
+            /* height : 600px; */
+            /* border : 1px solid black; */
+            margin-bottom : 20px;
+        }
+        .board_name{
+            display: flex;
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 40px 0px 40px;
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+        
+        .board_write {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        }
+        
+        .board_write table{
+            margin-left : auto;
+            margin-right : auto;
+        }
+        .write_header{
+            border-bottom : 1px dashed rgb(133, 113, 113);
+        }
+        .board_write table .title{
+            padding: 15px;
+            border-bottom : 1px dashed rgb(133, 113, 113);
+        }
+        .board_write .title th{
+            /* text-align: left; */
+            /* border : 1px solid red; */
+        }
+        .board_write table td{
+            padding : 8px;
+        }
+        .board_write table .title td input{
+            padding : 10px;
+            box-sizing: border-box;
+            width : 800px;
+            }
+            .board_writebox{
+                border-bottom : 1px dashed rgb(133, 113, 113);
+            }
+        .board_write .info {
+            display : none;
+        }
+    
+        .board_writebox textarea{
+            /* border : 1px solid red; */
+            display : block;
+            width : 870px;
+            height : 300px;
+            padding : 10px;
+            box-sizing: border-box;
+        
+        }
+        .write_fileattach .fileattachname{
+            font-size : 13px;
+
+        }
+        .writebox_btnwrap {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+    }
+
+    .writebox_btnwrap a {
+        display: inline-block;
+        width: 50px;
+        margin-left: 10px;
+        padding: 5px;
+        /* border: 1px solid #000; */
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .writebox_btnwrap a:first-child {
+        margin-left: 0;
+    }
+
+    .writebox_btnwrap a.on {
+        background: rgb(133, 113, 113);
+        color: #fff;
+    }
+
+    .writebox_btnwrap a.off{
+        border : 1px solid black;
+    }
+</style>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section>
+        <article id="board_content">
+            <div class="board_name">
+                <img src="img/boardlogo.png">
+                <h3>자유게시판 > 새글작성</h3>
+            </div>
+            <div class="board_write_wrap">
+                <div class="board_write">
+                    <table>
+                        <tr class="write_header">
+                            <th>분류</th>
+                            <td><select>
+                                <option value="" selected="selected">선택</option>
+                                <option value="">가입인사</option>
+                                <option value="">일상</option>
+                                <option value="">질문</option>
+                                <option value="">Knit-ing</option>
+                            </select></td>
+                        <tr class="title">
+                            <th>제목</th>
+                            <td><input type="text" placeholder="제목을 입력해주세요"></td>
+                        </tr>
+                        <tr class="info">
+                            <td>작성자</td>
+                            <td><input type="text" placeholder="작성자 입력"></td>
+                        </tr>
+                        <tr class="clear"></tr>
+                        <tr class="board_writebox">
+                            <td colspan="2"><textarea placeholder="글 내용을 입력해주세요"></textarea></td>
+                        </tr>
+                        <tr class="write_fileattach">
+                            <td class="fileattachname">파일 첨부</td>
+                            <td><input type="file"></td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="writebox_btnwrap">
+                        <a href="#" class="on">등록</a>
+                        <a href="freeboard.html" class="off">취소</a>
+                    </div>
+                
+                </div>
+    
+            </div>
+        
+        </article>
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <script src="include.js"></script>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        p{
+            display:block;
+        }
+        #login_wholewrap{
+            width : 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:80px 0px;
+            /* border : 1px solid red; */
+            background-color: rgb(241, 234, 225);
+        }
+        .login_wrap{
+            width : 1080px;
+            display: flex;
+            flex-flow: column wrap;
+            /* border : 1px solid blue; */
+            align-items: center;
+            justify-content: center;
+        }
+        .login_box{
+            /* border : 1px solid orange; */
+            width : 600px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius:10px;
+            padding: 50px 100px;
+            box-sizing: border-box;
+        }
+        .login_img{
+            width : 100px;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+        .login_txt{
+            /* border : 1px solid red; */
+            margin : 15px 0px 40px;
+            font-size : 24px;
+        }
+        .login_idbox{
+            width:100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-start;
+            justify-content: center;
+            border-radius : 10px;
+            margin : 0px 0px 20px;
+        }
+        .login_idbox>p{
+            margin : 0px 0px 5px;
+            font-size: 18px;
+        }
+        .login_id{
+            border : 1px solid grey;
+        }
+        .login_pwbox{
+            width:100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-start;
+            justify-content: center;
+            margin : 0px 0px 30px;
+        }
+        .login_pwbox>p{
+            margin : 0px 0px 5px;
+            font-size: 18px;
+        }
+        .login_pw{
+            border : 1px solid grey;
+        }
+
+        .login_btn{
+            width:100%;
+            height : 50px;
+            border-radius: 5px;
+            border-style: none;
+            background-color: rgba(168, 103, 60, 0.973);
+        }
+        .login_btn>span{
+            color : white;
+            font-size : 18px;
+        }
+        .login_id, .login_pw{
+            padding : 10px;
+            box-sizing: border-box;
+            width : 100%;
+            height : 50px;
+            border-radius:5px;
+        }
+        .login_btn{
+            padding : 4px 15px;
+        }
+        .find_idpw{
+            margin : 5px 0px 40px;
+            width : 100%;
+            display:flex;
+            flex-flow:column wrap;
+            align-items: flex-end;
+            justify-content: center;
+            font-size : 14px;
+        }
+        .snslogin{
+            margin : 0px 0px 20px;
+            display : block;
+            font-size:14px;
+        }
+        .login_snsbtn{
+            width:100%;
+            display: flex;
+            flex-flow : row wrap;
+            align-items: center;
+            justify-content: center;
+            margin : 0px 0px 50px;
+        }
+        .kakao_login{
+            margin : 0px 20px;
+            background-color: yellow;
+            border : 1px solid yellow;
+            width:50px;
+            padding : 4px 15px;
+            height:50px;
+            border-radius:100%;
+        }
+        .kakaoimg, .naverimg{
+            vertical-align: middle;
+            height : auto;
+            box-sizing: border-box;
+            width : 18px;
+            height : 18px;
+        }
+        .naver_login{
+            background-color: rgb(16, 211, 16);
+            border : 1px solid rgb(16, 211, 16);
+            width:50px;
+            height:50px;
+            border-radius:100%;
+            padding : 4px 15px;
+        }
+        .login_snsbtn img{
+            vertical-align: middle;
+            border-style:none;
+            box-sizing:border-box;
+            display: inline-block;
+        }
+        .login_signup{
+            font-size : 13px;
+            color : grey;
+        }
+        .login_signup>a{
+           text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div data-include="header.html"></div>
+    </header>
+    <section id = "login_wholewrap" >
+        <div class="login_wrap">
+            <div class="login_box">
+                <img src="img/wool1.png" class="login_img">
+                <p class="login_txt">로그인</p>
+                <div class="login_idbox">
+                    <p>아이디</p>
+                    <input type="text" width="100%" placeholder="아이디를 입력해주세요." class="login_id" value>
+                </div>
+                <div class="login_pwbox">
+                    <p>비밀번호</p>
+                    <input type="password" width="100%" placeholder="비밀번호를 입력해주세요." class="login_pw" value>
+                </div>
+                <button width="100%" height="50px" type="button" class="login_btn"><span>로그인</span></button>
+                <div class="find_idpw">
+                  <a href='#'>아이디 / 비밀번호 찾기 </a>       
+                </div>
+                <p class="snslogin">SNS 계정으로 로그인 하기</p>
+                <div class="login_snsbtn">
+                    <button width="50px" height="50px" radius="100%" type="button" class="kakao_login">
+                        <img src="img/icon_kakao.png" class="kakaoimg">
+                    </button>
+                    <button widht="50px" height="50px" radius="100%" type="button" class="naver_login">
+                        <img src="img/icon_naver.png" class="naverimg">
+                    </button>
+                </div>
+                <p class="login_signup">아직 회원이 아니라면?&nbsp;<a href="signup.html"><span>회원가입</span></a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <script src="include.js"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        
+    </script>
+</head>
+<style>
+    *{
+        margin : 0 auto;
+        padding : 0;
+        border-collapse: collapse;
+        text-decoration:none;
+        list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        section {
+            width : 1080px;
+            margin : 0 auto;
+            height : 600px;
+            /* border : 1px solid black; */
+        }
+        .board_name{
+            display: flex;
+            flex-flow : row wrap;
+            font-size: 22px;
+            box-sizing: border-box;
+            /* border : 1px solid red; */
+            margin : 40px 0px 40px;
+        }
+        .board_name>img{
+            width:40px;
+            height:40px;
+        }
+        #board_table{
+            /* border : 1px solid black; */
+            margin : 10px 0 0 30px;
+        }    
+        .board_table th{
+            background-color : rgb(241, 240, 238);
+            /* border : 1px solid red; */
+            padding : 10px;
+            text-align: center;
+            border-top : 1px solid rgb(190, 173, 173);
+            border-bottom : 1px solid rgb(133, 113, 113);
+        }
+        .row1_no{
+            width:40px;
+        }
+        .row1_intro{
+            width : 90px;
+        }
+        .row1_sub {
+            width : 750px;
+        }
+        .row1_date{
+            width : 130px;
+        }
+        .no, .date, .writer{
+            text-align: center;
+        }
+        .boardtb td {
+            height : 30px;
+            padding : 10px;
+            border-top :  rgb(133, 113, 113);
+            border-bottom :  1px solid rgb(133, 113, 113);
+        }
+        .tdpagenum_wrap{
+            text-align: center;
+        }
+        .td_pagenum {
+            display: inline-block;
+            /* border : 1px solid red; */
+           text-align: center;
+           justify-content: center;
+           /* margin-bottom : 20px; */
+           margin-top : 30px;
+        }
+
+        .td_pagenum li{
+            display: inline-block;
+            /* border : 1px solid red; */
+            margin : 3px;
+        }
+        .noticetb{
+            margin-bottom : 30px;
+        }
+        .writeboxbtn{
+            display: flex;
+            justify-content: end;
+        }
+        .writeboxbtn>button{
+            padding : 7px;
+            border-radius: 5px;
+            border : 1px solid grey;
+            font-weight : bold;
+        }
+        .freeboardfindwrap{
+            display: flex;
+            justify-content: end;
+            flex : row wrap;
+            margin-top : 10px;
+        }
+        .freeboardfindwrap>div{
+            margin-left : 3px;
+            /* border : 1px solid red; */
+        }
+       .findselectone,.freeboardheaderselect{
+        border : 1px solid grey;
+        padding : 8px; 
+        text-align: left;
+       }
+       #freeboardtxtfind{
+        border : 1px solid grey;
+        width : 200px;
+        height : 26px;
+        padding : 5px 1px 2px 5px;
+       }
+       #freeboardtxtfind input{
+        width : 180px;
+        /* padding : 2px 1px 2px 2px; */
+       }
+       .findbtn{
+        padding : 10px;
+       }
+</style>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <section>
+        <article id="notice_content">
+            <div class="board_name">
+                <img src="img/boardlogo.png">
+                <h3>자유게시판</h3>
+            </div>
+            <table class="boardtb">
+                <tr class = "board_table">
+                    <th class="row1_no">번호</th>
+                    <th class="row1_intro">분류</th>
+                    <th class="row1_sub">제목</th>
+                    <th class="row1_writer">작성자</th>
+                    <th class="row1_date">작성일</th>
+                </tr>
+                <tr>
+                    <td class="no">5</td>
+                    <td class="intro">[가입인사]</td>
+                    <td class="sub">가입했습니다.</td>
+                    <td class="writer">knitter5</td>
+                    <td class="date">2023/01/01</td>
+                </tr>
+                <tr>
+                    <td class="no">4</td>
+                    <td class="intro">[질문]</td>
+                    <td class="sub">다 풀고 다시 떠야될까요?ㅠㅠ</td>
+                    <td class="writer">knitter4</td>
+                    <td class="date">2023/01/01</td>
+                </tr>
+                <tr>
+                    <td class="no">3</td>
+                    <td class="intro">[일상]</td>
+                    <td class="sub">너무 추워요..</td>
+                    <td class="writer">knitter3</td>
+                    <td class="date">2023/01/01</td>
+                </tr>
+                <tr>
+                    <td class="no">2</td>
+                    <td class="intro">[질문]</td>
+                    <td class="sub">도안 해석 도와주세요!!!</td>
+                    <td class="writer">knitter2</td>
+                    <td class="date">2023/01/01</td>
+                </tr>
+                <tr>
+                    <td class="no">1</td>
+                    <td class="intro">[일상]</td>
+                    <td class="sub">동대문에서 실사왔어요~</td>
+                    <td class="writer">knitter1</td>
+                    <td class="date">2022/12/05</td>
+                </tr>
+            </table>
+            <div class="tdpagenum_wrap">
+                <ul class="td_pagenum">
+                    <li>◀</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>▶</li>
+                </ul>
+            </div>
+            <div class="writeboxbtn">
+                <button class="write" onclick="location.href='freeboard_write.html'"></a>글쓰기</button>
+            </div>
+            <div class="freeboardfindwrap">
+                <div id="freeboardfindselect">
+                    <select name="s1" class="findselectone" onchange="change(this)">
+                        <option value="subject">제목</option>
+                        <option value="content">내용</option>
+                        <option value="header">분류</option>
+                    </select>
+                </div>
+                <div id ="freeboardheaderfind" style="display:none" >
+                    <select class="freeboardheaderselect">
+                        <option value="">일상</option>
+                        <option value="">가입인사</option>
+                        <option value="">KNIT-ing</option>
+                        <option value="">질문</option>
+                        </option>
+                    </select>
+                </div>
+                <div id="freeboardtxtfind">
+                    <input type="text">
+                </div>
+                <div class="freeboardfindbtn">
+                    <button class="findbtn"></a>검색</button>
+                </div>
+            </div>
+            <script>
+            function change(c) {
+               if(c.value == "header"){
+                document.getElementById("freeboardheaderfind").style.display="block"
+               } else {
+                document.getElementById("freeboardheaderfind").style.display="none"
+               }
+            }
+        </script>
+        </article>
+
+    </section>
+    <footer>
+        <div data-include="footer.html"></div>
+    </footer>
+</body>
+</html>
